@@ -455,6 +455,8 @@ function renderFilmCard(film) {
     // create htmlElement
     const card = document.createElement('div');
     card.classList.add('card', 'film-card');
+    // render title section
+    card.appendChild(renderTitleSection(film.title));
     // render main section
     card.appendChild(renderFilmMainCardSection(film));
     // render description section
@@ -464,6 +466,15 @@ function renderFilmCard(film) {
     // render comment form section
     card.appendChild(renderCommentForm());
     return card;
+}
+
+function renderTitleSection(title){
+    const titleSectionWrapper = document.createElement('div');
+    titleSectionWrapper.classList.add('card-section', 'film-title-section');
+
+    // Render title
+    titleSectionWrapper.appendChild(renderTitle(title));
+    return titleSectionWrapper;
 }
 
 function renderFilmMainCardSection(film) {
@@ -494,9 +505,6 @@ function renderCardInfo(film) {
     // Add column wrapper
     const infoWrapper = document.createElement('div');
     infoWrapper.classList.add('section-column', 'film-info');
-
-    // Render title
-    infoWrapper.appendChild(renderTitle(film.title));
     // Render year
     infoWrapper.appendChild(renderYear(film.movie_year));
     // Render director
@@ -557,7 +565,7 @@ function renderCommentsSection(comments) {
     const commentsSection = document.createElement('div');
     commentsSection.classList.add('card-section', 'film-comments-section');
     // render comments subtitle
-    commentsSection.appendChild(renderSectionTitle('Comments:'))
+    commentsSection.appendChild(renderSectionTitle('Comments'))
     // render comments wrapper
     commentsSection.appendChild(renderCommentsWrapper(comments || []));
     return commentsSection;
@@ -628,7 +636,7 @@ function renderCommentForm() {
     const newCommentSection = document.createElement('div');
     newCommentSection.classList.add('card-section', 'film-new-comment-section');
     // render add new comment subtitle
-    newCommentSection.appendChild(renderSectionTitle('Add new comment:'))
+    newCommentSection.appendChild(renderSectionTitle('Add new comment'))
     // render form
     // Render comment form
     const commentForm = renderCommentFormElement();
@@ -674,6 +682,7 @@ function renderMessageTextarea() {
 
 function renderSubmitButton() {
     const submitButton = document.createElement('button');
+    submitButton.classList.add('submit')
     submitButton.type = 'submit';
     submitButton.textContent = 'Add comment';
     return submitButton;
@@ -700,7 +709,62 @@ function handleFormSubmit(event) {
     appendComment(comment);
 }
 
-const main = document.querySelector('#main');
-const randMovieIndex = Math.floor(Math.random() * listOfMovies.length);
-const randomMovie = listOfMovies[randMovieIndex];
-main.appendChild(renderFilmCard(randomMovie));
+function renderMovieCards(movies){
+    const main = document.querySelector('#main');
+    main.innerHTML = ''; //clear content
+    movies.forEach(movie => main.appendChild(renderFilmCard(movie)));
+}
+
+renderMovieCards(listOfMovies);
+
+// Search form
+function renderSearchMoviesForm(){
+    const searchBar = document.getElementById('search-bar');
+    const form = document.createElement('form');
+    form.classList.add('form');
+    form.appendChild(renderSearchMoviesFormInput());
+    form.appendChild(renderSearchMoviesFormButton());
+    searchBar.appendChild(form);
+}
+
+function renderSearchMoviesFormInput(){
+    const input = document.createElement('input');
+    input.classList.add('input', 'search-input');
+    input.type = 'search';
+    input.placeholder = 'Start typing to search...';
+
+    return input;
+}
+
+function renderSearchMoviesFormButton(){
+    const searchButton = document.createElement('button');
+    searchButton.type = "submit";
+    searchButton.textContent = "Search";
+    searchButton.classList.add('btn', 'search-btn');
+
+    return searchButton;
+}
+
+renderSearchMoviesForm();
+
+function searchMovie(keyword){
+    const lowerCaseKeyword = keyword.toLowerCase().trim();
+    return listOfMovies.filter(movie =>
+        movie.title.toLowerCase().includes(lowerCaseKeyword)
+    );
+}
+
+function addSearchMoviesHandler(){
+    const searchButton = document.querySelector('.search-btn');
+    searchButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        const searchInput = document.querySelector('.search-input');
+        const keyword = searchInput.value.trim();
+        const searchResults = searchMovie(keyword);
+        renderMovieCards(searchResults);
+    })}
+
+addSearchMoviesHandler()
+
+// Sort movie
+
