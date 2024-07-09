@@ -4,10 +4,40 @@ body {
     line-height: 20px;
 }
 
+/* nav */
+#nav {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.sort-panel {
+    display: flex;
+    align-items: center;
+}
+
+.fieldset {
+    display: flex;
+    gap: 10px;
+    margin-left: 120px;
+    border: none;
+}
+
+legend {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+label {
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+/* main */
 #main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 30px 120px;
+    margin: 0 120px;
     gap: 50px;
 }
 
@@ -142,12 +172,14 @@ textarea {
 #search-bar {
 
 }
+
 .form {
     display: flex;
     justify-content: flex-end;
     margin: 30px 120px;
     gap: 10px;
 }
+
 .input {
     cursor: pointer;
     background-color: rgba(128, 128, 128, 0.1);
@@ -158,9 +190,11 @@ textarea {
     width: 250px;
     transition: all ease 0.3s;
 }
+
 .input:hover {
     border: 1px solid deepskyblue;
 }
+
 .btn {
     cursor: pointer;
     border: none;
@@ -169,6 +203,7 @@ textarea {
     background-color: lightblue;
     transition: all ease 0.3s;
 }
+
 .btn:hover {
     background-color: deepskyblue;
 }
