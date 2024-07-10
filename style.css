@@ -43,7 +43,18 @@ label {
 
 .card {
 }
-
+.film-rating {
+    display: flex;
+    gap: 3px;
+    height: 20px;
+    margin-bottom: 7px;
+}
+.fa-regular {
+    color: deepskyblue;
+}
+.fa-solid {
+    color: deepskyblue;
+}
 .film-card {
     box-shadow: 2px 3px 10px rgb(128, 128, 128);
     padding: 20px;

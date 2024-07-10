@@ -58,7 +58,7 @@ function renderSortingPanelInputTitle() {
     const sortInputTitle = document.createElement('input');
     sortInputTitle.type = 'radio';
     sortInputTitle.classList.add('sort-title');
-    sortInputTitle.id = 'sort-by-title'
+    sortInputTitle.id = 'sort-by-title';
     sortInputTitle.value = 'title';
     sortInputTitle.name = 'sort-radio';
 

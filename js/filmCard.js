@@ -3,6 +3,7 @@ function renderFilmCard(film) {
     const card = document.createElement('div');
     card.classList.add('card', 'film-card');
     // render title section
+    card.appendChild(renderStarRating(film));
     card.appendChild(renderTitleSection(film.title));
     // render main section
     card.appendChild(renderFilmMainCardSection(film));
@@ -15,6 +16,35 @@ function renderFilmCard(film) {
     return card;
 }
 
+// Render rating
+function renderStarRating(film) {
+    const filmRating = document.createElement('div');
+    filmRating.classList.add('film-rating');
+
+    for (let i = 0; i < 5; i++) {
+        const starIcon = document.createElement('i');
+        starIcon.classList.add('fa-regular', 'fa-star');
+        filmRating.appendChild(starIcon);
+
+        filmRating.addEventListener('click', () => {
+            film.rating = i + 1;
+            updateStars(filmRating, film.rating);
+        });
+    }
+
+    updateStars(filmRating, film.rating || 0);
+
+    return filmRating;
+}
+
+// Update star rating
+function updateStars(ratingContainer, rating) {
+    const stars = ratingContainer.querySelectorAll('.film-rating i');
+    stars.forEach((star, index) => {
+        star.classList.toggle('fa-solid', index < rating);
+        star.classList.toggle('fa-regular', index >= rating);
+    });
+}
 
 function renderTitleSection(title) {
     const titleSectionWrapper = document.createElement('div');
