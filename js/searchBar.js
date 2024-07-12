@@ -46,6 +46,16 @@ function addSearchMoviesHandler() {
         const searchInput = document.querySelector('.search-input');
         const keyword = searchInput.value.trim();
         const searchResults = searchMovie(keyword);
-        renderMovieCards(searchResults);
-    })
+
+        if (searchResults.length === 0) {
+            displayNoResultsMessage();
+        } else {
+            renderMovieCards(searchResults);
+        }
+    });
+}
+
+function displayNoResultsMessage(){
+    const resultsContainer = document.getElementById('main'); // Adjust the selector to your actual results container
+    resultsContainer.innerHTML = '<p>No movies found.</p>';
 }

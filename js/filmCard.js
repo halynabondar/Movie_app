@@ -26,7 +26,7 @@ function renderStarRating(film) {
         starIcon.classList.add('fa-regular', 'fa-star');
         filmRating.appendChild(starIcon);
 
-        filmRating.addEventListener('click', () => {
+        starIcon.addEventListener('click', () => {
             film.rating = i + 1;
             updateStars(filmRating, film.rating);
         });
@@ -153,16 +153,15 @@ function renderCommentsSection(comments) {
 function renderCommentsWrapper(comments) {
     const wrapper = document.createElement('div');
     wrapper.classList.add('comments-wrapper');
-    wrapper.id = "comments-list";
 
     comments.forEach(comment => {
-        appendComment(comment);
+        appendComment(comment, wrapper);
     });
 
     return wrapper;
 }
 
-function appendComment(comment) {
+function appendComment(comment, commentsContainer) {
     const commentWrapper = document.createElement('div');
     commentWrapper.classList.add('comment-wrapper');
     // Render comment meta column
@@ -171,7 +170,6 @@ function appendComment(comment) {
     // Render comment data column
     commentWrapper.appendChild(renderCommentData(comment.message));
 
-    const commentsContainer = document.getElementById('comments-list');
     commentsContainer.appendChild(commentWrapper);
 }
 
@@ -285,7 +283,12 @@ function handleFormSubmit(event) {
         message: formData.get('message'),
         timestamp: new Date().toISOString() // Generate timestamp
     }
-    appendComment(comment);
+
+    event.target.reset();
+
+    const commentsList = event.target.parentElement.parentElement.querySelector('.comments-wrapper');
+
+    appendComment(comment, commentsList);
 }
 
 function renderMovieCards(movies) {

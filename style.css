@@ -5,6 +5,7 @@ body {
 }
 
 /* nav */
+/* sort panel */
 #nav {
     display: flex;
     flex-direction: row-reverse;
@@ -33,6 +34,47 @@ label {
     margin-left: 5px;
 }
 
+/* search */
+
+#search-bar {
+
+}
+
+.form {
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px 120px;
+    gap: 10px;
+}
+
+.input {
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.1);
+    padding: 5px 5px;
+    border: 1px solid lightblue;
+    border-radius: 7px;
+    height: 30px;
+    width: 250px;
+    transition: all ease 0.3s;
+}
+
+.input:hover {
+    border: 1px solid deepskyblue;
+}
+
+.btn {
+    cursor: pointer;
+    border: none;
+    padding: 7px 15px;
+    border-radius: 7px;
+    background-color: lightblue;
+    transition: all ease 0.3s;
+}
+
+.btn:hover {
+    background-color: deepskyblue;
+}
+
 /* main */
 #main {
     display: grid;
@@ -56,7 +98,7 @@ label {
     color: deepskyblue;
 }
 .film-card {
-    box-shadow: 2px 3px 10px rgb(128, 128, 128);
+    box-shadow: 1px 1px 7px rgba(128, 128, 128, 0.5);
     padding: 20px;
     /*border: 1px solid black;*/
     border-radius: 15px;
@@ -120,8 +162,11 @@ span {
 
 .comments-wrapper {
     display: flex;
-    gap: 30px;
-    margin-bottom: 15px;
+    max-height: 120px;
+    overflow-y: scroll;
+    flex-direction: column;
+    gap: 15px;
+    /*margin-bottom: 15px;*/
     font-size: 14px;
 }
 
@@ -129,7 +174,6 @@ span {
     border: 1px solid rgb(128, 128, 128);
     border-radius: 10px;
     gap: 15px;
-    /*max-width: 300px;*/
     padding: 10px;
 }
 
@@ -170,51 +214,16 @@ textarea {
 }
 
 .submit {
+    background-color: lightblue;
     display: block;
+    width: 130px;
     cursor: pointer;
     border-radius: 10px;
     border: none;
     padding: 7px 20px;
     margin-bottom: -20px;
-}
-
-/* search */
-
-#search-bar {
-
-}
-
-.form {
-    display: flex;
-    justify-content: flex-end;
-    margin: 30px 120px;
-    gap: 10px;
-}
-
-.input {
-    cursor: pointer;
-    background-color: rgba(128, 128, 128, 0.1);
-    padding: 5px 5px;
-    border: 1px solid lightblue;
-    border-radius: 7px;
-    height: 30px;
-    width: 250px;
     transition: all ease 0.3s;
 }
-
-.input:hover {
-    border: 1px solid deepskyblue;
-}
-
-.btn {
-    cursor: pointer;
-    border: none;
-    padding: 7px 15px;
-    border-radius: 7px;
-    background-color: lightblue;
-    transition: all ease 0.3s;
-}
-
-.btn:hover {
+.submit:hover {
     background-color: deepskyblue;
 }

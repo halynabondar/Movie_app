@@ -6,7 +6,7 @@ const listOfMovies = [
         movie_year: 1984,
         director: "James Cameron",
         actors: ["Arnold Schwarzenegger", "Linda Hamilton", "Michael Biehn", "Paul Winfield", "Lance Henriksen", "Rick Rossovich", "Bess Motta", "Earl Boen", "Bill Paxton"],
-        poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/q8ffBuxQlYOHrvPniLgCbmKK4Lv.jpg',
+        poster_url: 'https://www.themoviedb.org/t/p/w1280/hcItc8IMO0WKyRWPGkI6xtKVu6X.jpg',
         price: '80.00'
     },
     {
@@ -26,7 +26,7 @@ const listOfMovies = [
         movie_year: 1993,
         director: "Steven Spielberg",
         actors: ["Sam Neill", "Laura Dern", "Jeff Goldblum", "Richard Attenborough", "Bob Peck"],
-        poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/c414cDeQ9b6qLPLeKmiJuLDUREJ.jpg',
+        poster_url: 'https://www.themoviedb.org/t/p/w1280/kYVJCtAOhkIbz4MWulx0N17ZNTQ.jpg',
         price: '90.00'
     },
     {
@@ -46,7 +46,7 @@ const listOfMovies = [
         movie_year: 2010,
         director: "Christopher Nolan",
         actors: ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page", "Tom Hardy", "Ken Watanabe", "Dileep Rao", "Cillian Murphy"],
-        poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg',
+        poster_url: 'https://www.themoviedb.org/t/p/w1280/sNxqwtyHMNQwKWoFYDqcYTui5Ok.jpg',
         price: '95.00'
     },
     {
@@ -146,7 +146,7 @@ const listOfMovies = [
         movie_year: 1991,
         director: "Jonathan Demme",
         actors: ["Jodie Foster", "Anthony Hopkins", "Scott Glenn", "Ted Levine", "Anthony Heald"],
-        poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qjAy5Yjc4XmuBsBz9gQFoLHrRPB.jpg',
+        poster_url: 'https://www.themoviedb.org/t/p/w1280/ldxA9OxJyM7XtzXlQmT5FbZ0A58.jpg',
         price: '85.00'
     },
     {
@@ -176,7 +176,7 @@ const listOfMovies = [
         movie_year: 1997,
         director: "James Cameron",
         actors: ["Leonardo DiCaprio", "Kate Winslet", "Billy Zane", "Kathy Bates", "Frances Fisher"],
-        poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kHXEpyfl6zqn8a6YuozZUujufXf.jpg',
+        poster_url: 'https://www.themoviedb.org/t/p/w1280/mA0Dcp327JOX1YoaQS5nqXjDoyW.jpg',
         price: '85.00'
     },
     {
@@ -286,7 +286,7 @@ const listOfMovies = [
         movie_year: 2014,
         director: "Damien Chazelle",
         actors: ["Miles Teller", "J.K. Simmons", "Melissa Benoist", "Paul Reiser", "Austin Stowell"],
-        poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lIv1QinFqz4dlp5U4lQ6HaiskOZ.jpg',
+        poster_url: 'https://www.themoviedb.org/t/p/w1280/nq3mYsTXx6086nFXxzDReQI0J1S.jpg',
         price: '75.00'
     },
     {
@@ -306,7 +306,7 @@ const listOfMovies = [
         movie_year: 2014,
         director: "Morten Tyldum",
         actors: ["Benedict Cumberbatch", "Keira Knightley", "Matthew Goode", "Rory Kinnear", "Allen Leech"],
-        poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/noUp0XOqIcmgefRnRZa1nhtRvWO.jpg',
+        poster_url: 'https://www.themoviedb.org/t/p/w1280/iM1C3NYISOzLbWEo8HcUDBASprh.jpg',
         price: '85.00'
     },
     {
@@ -336,7 +336,7 @@ const listOfMovies = [
         movie_year: 2019,
         director: "Martin Scorsese",
         actors: ["Robert De Niro", "Al Pacino", "Joe Pesci", "Harvey Keitel", "Ray Romano"],
-        poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bkYFIWvMaHX3PH6peqnrmwUq6mX.jpg',
+        poster_url: 'https://www.themoviedb.org/t/p/w1280/4ZXfScDPpnTvPTHPT05ulDWqOfk.jpg',
         price: '85.00'
     },
     {
@@ -376,7 +376,7 @@ const listOfMovies = [
         movie_year: 2015,
         director: "Alejandro G. Iñárritu",
         actors: ["Leonardo DiCaprio", "Tom Hardy", "Will Poulter", "Domhnall Gleeson", "Forrest Goodluck"],
-        poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/oXUWEc5i3wYyFnL1Ycu8ppxxPvs.jpg',
+        poster_url: 'https://www.themoviedb.org/t/p/w1280/gvWniVnehAkIAfy40VlcFy3vOef.jpg',
         price: '85.00'
     },
     {
@@ -386,7 +386,7 @@ const listOfMovies = [
         movie_year: 1998,
         director: "Peter Weir",
         actors: ["Jim Carrey", "Ed Harris", "Laura Linney", "Noah Emmerich", "Natascha McElhone"],
-        poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hVkvp99G3Z3C9A1ESwRbfuvPs5J.jpg',
+        poster_url: 'https://www.themoviedb.org/t/p/w1280/lYMMRbMZCyn12t6HLVYfmWfHrrq.jpg',
         price: '70.00'
     },
     {
@@ -416,7 +416,7 @@ const listOfMovies = [
         movie_year: 1980,
         director: "Stanley Kubrick",
         actors: ["Jack Nicholson", "Shelley Duvall", "Danny Lloyd", "Scatman Crothers", "Barry Nelson"],
-        poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9fgh3Ns1iRzlQNYuJyK0ARQZU7w.jpg',
+        poster_url: 'https://www.themoviedb.org/t/p/w1280/upBsuweJjBftrkJGqVf8PHCdH0l.jpg',
         price: '85.00'
     },
     {
