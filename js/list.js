@@ -6,7 +6,7 @@ const listOfMovies = [
         movie_year: 1984,
         director: "James Cameron",
         actors: ["Arnold Schwarzenegger", "Linda Hamilton", "Michael Biehn", "Paul Winfield", "Lance Henriksen", "Rick Rossovich", "Bess Motta", "Earl Boen", "Bill Paxton"],
-        poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/q8ffBuxQlYOHrvPniLgCbmKK4Lv.jpg',
+        poster_url: 'https://www.themoviedb.org/t/p/w1280/hcItc8IMO0WKyRWPGkI6xtKVu6X.jpg',
         price: '80.00'
     },
     {
@@ -26,7 +26,7 @@ const listOfMovies = [
         movie_year: 1993,
         director: "Steven Spielberg",
         actors: ["Sam Neill", "Laura Dern", "Jeff Goldblum", "Richard Attenborough", "Bob Peck"],
-        poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/c414cDeQ9b6qLPLeKmiJuLDUREJ.jpg',
+        poster_url: 'https://www.themoviedb.org/t/p/w1280/kYVJCtAOhkIbz4MWulx0N17ZNTQ.jpg',
         price: '90.00'
     },
     {
@@ -46,7 +46,7 @@ const listOfMovies = [
         movie_year: 2010,
         director: "Christopher Nolan",
         actors: ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page", "Tom Hardy", "Ken Watanabe", "Dileep Rao", "Cillian Murphy"],
-        poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg',
+        poster_url: 'https://www.themoviedb.org/t/p/w1280/sNxqwtyHMNQwKWoFYDqcYTui5Ok.jpg',
         price: '95.00'
     },
     {
@@ -146,7 +146,7 @@ const listOfMovies = [
         movie_year: 1991,
         director: "Jonathan Demme",
         actors: ["Jodie Foster", "Anthony Hopkins", "Scott Glenn", "Ted Levine", "Anthony Heald"],
-        poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qjAy5Yjc4XmuBsBz9gQFoLHrRPB.jpg',
+        poster_url: 'https://www.themoviedb.org/t/p/w1280/ldxA9OxJyM7XtzXlQmT5FbZ0A58.jpg',
         price: '85.00'
     },
     {
@@ -176,7 +176,7 @@ const listOfMovies = [
         movie_year: 1997,
         director: "James Cameron",
         actors: ["Leonardo DiCaprio", "Kate Winslet", "Billy Zane", "Kathy Bates", "Frances Fisher"],
-        poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kHXEpyfl6zqn8a6YuozZUujufXf.jpg',
+        poster_url: 'https://www.themoviedb.org/t/p/w1280/mA0Dcp327JOX1YoaQS5nqXjDoyW.jpg',
         price: '85.00'
     },
     {
@@ -286,7 +286,7 @@ const listOfMovies = [
         movie_year: 2014,
         director: "Damien Chazelle",
         actors: ["Miles Teller", "J.K. Simmons", "Melissa Benoist", "Paul Reiser", "Austin Stowell"],
-        poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lIv1QinFqz4dlp5U4lQ6HaiskOZ.jpg',
+        poster_url: 'https://www.themoviedb.org/t/p/w1280/nq3mYsTXx6086nFXxzDReQI0J1S.jpg',
         price: '75.00'
     },
     {
@@ -306,7 +306,7 @@ const listOfMovies = [
         movie_year: 2014,
         director: "Morten Tyldum",
         actors: ["Benedict Cumberbatch", "Keira Knightley", "Matthew Goode", "Rory Kinnear", "Allen Leech"],
-        poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/noUp0XOqIcmgefRnRZa1nhtRvWO.jpg',
+        poster_url: 'https://www.themoviedb.org/t/p/w1280/iM1C3NYISOzLbWEo8HcUDBASprh.jpg',
         price: '85.00'
     },
     {
@@ -336,7 +336,7 @@ const listOfMovies = [
         movie_year: 2019,
         director: "Martin Scorsese",
         actors: ["Robert De Niro", "Al Pacino", "Joe Pesci", "Harvey Keitel", "Ray Romano"],
-        poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bkYFIWvMaHX3PH6peqnrmwUq6mX.jpg',
+        poster_url: 'https://www.themoviedb.org/t/p/w1280/4ZXfScDPpnTvPTHPT05ulDWqOfk.jpg',
         price: '85.00'
     },
     {
@@ -376,7 +376,7 @@ const listOfMovies = [
         movie_year: 2015,
         director: "Alejandro G. Iñárritu",
         actors: ["Leonardo DiCaprio", "Tom Hardy", "Will Poulter", "Domhnall Gleeson", "Forrest Goodluck"],
-        poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/oXUWEc5i3wYyFnL1Ycu8ppxxPvs.jpg',
+        poster_url: 'https://www.themoviedb.org/t/p/w1280/gvWniVnehAkIAfy40VlcFy3vOef.jpg',
         price: '85.00'
     },
     {
@@ -386,7 +386,7 @@ const listOfMovies = [
         movie_year: 1998,
         director: "Peter Weir",
         actors: ["Jim Carrey", "Ed Harris", "Laura Linney", "Noah Emmerich", "Natascha McElhone"],
-        poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hVkvp99G3Z3C9A1ESwRbfuvPs5J.jpg',
+        poster_url: 'https://www.themoviedb.org/t/p/w1280/lYMMRbMZCyn12t6HLVYfmWfHrrq.jpg',
         price: '70.00'
     },
     {
@@ -416,7 +416,7 @@ const listOfMovies = [
         movie_year: 1980,
         director: "Stanley Kubrick",
         actors: ["Jack Nicholson", "Shelley Duvall", "Danny Lloyd", "Scatman Crothers", "Barry Nelson"],
-        poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9fgh3Ns1iRzlQNYuJyK0ARQZU7w.jpg',
+        poster_url: 'https://www.themoviedb.org/t/p/w1280/upBsuweJjBftrkJGqVf8PHCdH0l.jpg',
         price: '85.00'
     },
     {
@@ -450,257 +450,3 @@ const listOfMovies = [
         price: '85.00'
     }
 ];
-
-function renderFilmCard(film) {
-    // create htmlElement
-    const card = document.createElement('div');
-    card.classList.add('card', 'film-card');
-    // render main section
-    card.appendChild(renderFilmMainCardSection(film));
-    // render description section
-    card.appendChild(renderFilmDescriptionSection(film.description));
-    // render comments section
-    card.appendChild(renderCommentsSection(film.comments || []));
-    // render comment form section
-    card.appendChild(renderCommentForm());
-    return card;
-}
-
-function renderFilmMainCardSection(film) {
-    // render section wrapper
-    const mainSectionWrapper = document.createElement('div');
-    mainSectionWrapper.classList.add('card-section', 'film-main-section');
-    // render thumbnail
-    mainSectionWrapper.appendChild(renderCardThumbnail(film.poster_url));
-    // render info column
-    mainSectionWrapper.appendChild(renderCardInfo(film));
-
-    return mainSectionWrapper;
-}
-
-function renderCardThumbnail(imageURL) {
-    // add column wrapper
-    const thumbnailWrapper = document.createElement('div');
-    thumbnailWrapper.classList.add('section-column', 'film-poster');
-    // add image
-    const image = document.createElement('img');
-    image.src = imageURL;
-    thumbnailWrapper.appendChild(image);
-
-    return thumbnailWrapper;
-}
-
-function renderCardInfo(film) {
-    // Add column wrapper
-    const infoWrapper = document.createElement('div');
-    infoWrapper.classList.add('section-column', 'film-info');
-
-    // Render title
-    infoWrapper.appendChild(renderTitle(film.title));
-    // Render year
-    infoWrapper.appendChild(renderYear(film.movie_year));
-    // Render director
-    infoWrapper.appendChild(renderDirector(film.director));
-    // Render actors
-    infoWrapper.appendChild(renderActors(film.actors));
-    // Render price
-    infoWrapper.appendChild(renderPrice(film.price));
-
-    return infoWrapper;
-}
-
-
-function renderTitle(title) {
-    const titleElement = document.createElement('div');
-    titleElement.textContent = title;
-    titleElement.classList.add('film-info-line', 'film-title');
-    return titleElement;
-}
-
-function renderYear(year) {
-    const yearElement = document.createElement('div');
-    yearElement.innerHTML = `<span>Year</span>: ${year}`;
-    yearElement.classList.add('film-info-line', 'film-year');
-    return yearElement;
-}
-
-function renderDirector(director) {
-    const directorElement = document.createElement('div');
-    directorElement.innerHTML = `<span>Director</span>: ${director}`;
-    directorElement.classList.add('film-info-line', 'film-director');
-    return directorElement;
-}
-
-function renderActors(actors) {
-    const actorsElement = document.createElement('div');
-    actorsElement.innerHTML = `<span>Actors</span>: ${actors.join(', ')}`;
-    actorsElement.classList.add('film-info-line', 'film-actors');
-    return actorsElement;
-}
-
-function renderPrice(price) {
-    const priceElement = document.createElement('div');
-    priceElement.innerHTML = `<span>Price</span>: $${price}`;
-    priceElement.classList.add('film-info-line', 'film-price');
-    return priceElement;
-}
-
-
-function renderFilmDescriptionSection(description) {
-    const descriptionSection = document.createElement('div');
-    descriptionSection.classList.add('card-section', 'film-description-section');
-    descriptionSection.textContent = description;
-    return descriptionSection;
-}
-
-function renderCommentsSection(comments) {
-    const commentsSection = document.createElement('div');
-    commentsSection.classList.add('card-section', 'film-comments-section');
-    // render comments subtitle
-    commentsSection.appendChild(renderSectionTitle('Comments:'))
-    // render comments wrapper
-    commentsSection.appendChild(renderCommentsWrapper(comments || []));
-    return commentsSection;
-}
-
-function renderCommentsWrapper(comments) {
-    const wrapper = document.createElement('div');
-    wrapper.classList.add('comments-wrapper');
-    wrapper.id = "comments-list";
-
-    comments.forEach(comment => {
-        appendComment(comment);
-    });
-
-    return wrapper;
-}
-
-function appendComment(comment) {
-    const commentWrapper = document.createElement('div');
-    commentWrapper.classList.add('comment-wrapper');
-    // Render comment meta column
-    commentWrapper.appendChild(renderCommentMeta(comment));
-
-    // Render comment data column
-    commentWrapper.appendChild(renderCommentData(comment.message));
-
-    const commentsContainer = document.getElementById('comments-list');
-    commentsContainer.appendChild(commentWrapper);
-}
-
-function renderCommentMeta(comment) {
-    const metaWrapper = document.createElement('div');
-    metaWrapper.classList.add('comment-meta-wrapper');
-
-    // Render user row
-    metaWrapper.appendChild(commentUserRow(comment.username));
-
-    // Render time row
-    metaWrapper.appendChild(commentTimeRow(comment.timestamp));
-
-    return metaWrapper;
-}
-
-function commentUserRow(author) {
-    const userRow = document.createElement('div');
-    userRow.classList.add('comment-user-row');
-    userRow.innerHTML = `<span>Author:</span><br> ${author}`;
-    return userRow;
-}
-
-function commentTimeRow(timestamp) {
-    const timeRow = document.createElement('div');
-    timeRow.classList.add('comment-time-row');
-    timeRow.innerHTML = `<span>Posted on:</span><br> ${new Date(timestamp).toLocaleString()}`;
-    return timeRow;
-}
-
-
-function renderCommentData(commentText) {
-    const dataWrapper = document.createElement('div');
-    dataWrapper.classList.add('comment-data-wrapper');
-    dataWrapper.textContent = commentText;
-    return dataWrapper;
-}
-
-
-function renderCommentForm() {
-    const newCommentSection = document.createElement('div');
-    newCommentSection.classList.add('card-section', 'film-new-comment-section');
-    // render add new comment subtitle
-    newCommentSection.appendChild(renderSectionTitle('Add new comment:'))
-    // render form
-    // Render comment form
-    const commentForm = renderCommentFormElement();
-    newCommentSection.appendChild(commentForm);
-
-    // Handle form submission
-    commentForm.addEventListener('submit', handleFormSubmit);
-    return newCommentSection;
-}
-
-function renderCommentFormElement() {
-    const formElement = document.createElement('form');
-    formElement.classList.add('comment-form');
-
-    // Append username input
-    formElement.appendChild(renderUsernameInput());
-
-    // Append message textarea
-    formElement.appendChild(renderMessageTextarea());
-
-    // Append submit button
-    formElement.appendChild(renderSubmitButton());
-
-    return formElement;
-}
-
-function renderUsernameInput() {
-    const usernameInput = document.createElement('input');
-    usernameInput.type = 'text';
-    usernameInput.name = 'username';
-    usernameInput.placeholder = 'Write your name here...';
-    usernameInput.required = true;
-    return usernameInput;
-}
-
-function renderMessageTextarea() {
-    const messageTextarea = document.createElement('textarea');
-    messageTextarea.name = 'message';
-    messageTextarea.placeholder = 'Write your comment here...';
-    messageTextarea.required = true;
-    return messageTextarea;
-}
-
-function renderSubmitButton() {
-    const submitButton = document.createElement('button');
-    submitButton.type = 'submit';
-    submitButton.textContent = 'Add comment';
-    return submitButton;
-}
-
-function renderSectionTitle(title) {
-    const sectionTitleElement = document.createElement('div');
-    sectionTitleElement.textContent = title;
-    sectionTitleElement.classList.add('section-title');
-    return sectionTitleElement;
-}
-
-function handleFormSubmit(event) {
-    event.preventDefault();
-
-    // Collect form data using FormData
-    const formData = new FormData(event.target);
-    // convert formData into Comments structure(object)
-    const comment = {
-        username: formData.get('username'),
-        message: formData.get('message'),
-        timestamp: new Date().toISOString() // Generate timestamp
-    }
-    appendComment(comment);
-}
-
-const main = document.querySelector('#main');
-const randMovieIndex = Math.floor(Math.random() * listOfMovies.length);
-const randomMovie = listOfMovies[randMovieIndex];
-main.appendChild(renderFilmCard(randomMovie));
