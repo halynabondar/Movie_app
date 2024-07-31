@@ -17,13 +17,14 @@ body {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    margin: 30px 50px;
 }
 
 .sort-panel {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin: 30px 50px;
+    /*margin: 30px 50px;*/
 }
 select {
     padding: 5px;
@@ -36,12 +37,20 @@ select:hover {
     background-color: deepskyblue;
 }
 
+/* timer */
+
+#timer-limit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 /* search */
 
 .form {
     display: flex;
     justify-content: flex-end;
-    margin: 30px 50px;
+    /*margin: 30px 50px;*/
     gap: 10px;
 }
 

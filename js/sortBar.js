@@ -67,7 +67,7 @@ function sortMovies() {
             return currentMoviesList;
     }
 }
-function  sortByTitle(){
+function sortByTitle(){
     return currentMoviesList.sort((a,b) => {
         const titleA = a.title.toUpperCase(); // ignore upper and lowercase
         const titleB = b.title.toUpperCase(); // ignore upper and lowercase
@@ -83,7 +83,7 @@ function  sortByTitle(){
     });
 }
 
-function  sortByPrice(){
+function sortByPrice(){
     return currentMoviesList.sort((a,b) => {
         const priceA = a.price;
         const priceB = b.price;
@@ -91,7 +91,7 @@ function  sortByPrice(){
     });
 }
 
-function  sortByYear(){
+function sortByYear(){
     return currentMoviesList.sort((a,b) => {
         const yearA = a.movie_year;
         const yearB = b.movie_year;

@@ -1,6 +1,8 @@
 renderSearchMoviesForm();
 addSearchMoviesHandler();
 
+timerLimitRender();
+
 renderSortingPanel();
 addSortMoviesHandler();
 
