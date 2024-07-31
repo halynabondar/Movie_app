@@ -1,11 +1,18 @@
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
 body {
     font-family: Avenir, serif;
     font-size: 14px;
     line-height: 20px;
+    box-sizing: border-box;
 }
 
 /* nav */
 /* sort panel */
+
 #nav {
     display: flex;
     flex-direction: row-reverse;
@@ -15,23 +22,18 @@ body {
 .sort-panel {
     display: flex;
     align-items: center;
-}
-
-.fieldset {
-    display: flex;
     gap: 10px;
-    margin-left: 120px;
+    margin: 30px 50px;
+}
+select {
+    padding: 5px;
+    border-radius: 7px;
     border: none;
+    background-color: lightblue;
+    transition: background-color ease 0.3s;
 }
-
-legend {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-label {
-    font-size: 16px;
-    margin-left: 5px;
+select:hover {
+    background-color: deepskyblue;
 }
 
 /* search */
@@ -39,7 +41,7 @@ label {
 .form {
     display: flex;
     justify-content: flex-end;
-    margin: 30px 120px;
+    margin: 30px 50px;
     gap: 10px;
 }
 

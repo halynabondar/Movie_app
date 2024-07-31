@@ -4,4 +4,6 @@ addSearchMoviesHandler();
 renderSortingPanel();
 addSortMoviesHandler();
 
-renderMovieCards(listOfMovies);
+let currentMoviesList = listOfMovies;
+
+renderMovieCards(currentMoviesList);
