@@ -1,5 +1,5 @@
 .container {
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -8,6 +8,7 @@ body {
     font-size: 14px;
     line-height: 20px;
     box-sizing: border-box;
+    margin: 0;
 }
 
 /* nav */
@@ -17,14 +18,15 @@ body {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    margin: 30px 50px;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .sort-panel {
     display: flex;
     align-items: center;
     gap: 10px;
-    /*margin: 30px 50px;*/
 }
 select {
     padding: 5px;
@@ -32,12 +34,13 @@ select {
     border: none;
     background-color: lightblue;
     transition: background-color ease 0.3s;
+    width: 120px;
 }
 select:hover {
     background-color: deepskyblue;
 }
 
-/* timer */
+/* timeout */
 
 #timer-limit {
     display: flex;
@@ -45,12 +48,25 @@ select:hover {
     gap: 10px;
 }
 
+/* timer */
+
+.on-site-panel {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 7px 10px;
+    border-radius: 12px;
+    background-color: blanchedalmond;
+}
+#user-on-site-label {
+    color: rgb(128, 128, 128);
+}
+
 /* search */
 
 .form {
     display: flex;
     justify-content: flex-end;
-    /*margin: 30px 50px;*/
     gap: 10px;
 }
 
@@ -87,7 +103,6 @@ select:hover {
 #main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 0 120px;
     gap: 50px;
 }
 

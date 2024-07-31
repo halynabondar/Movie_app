@@ -4,6 +4,8 @@ addSearchMoviesHandler();
 timerLimitRender();
 
 renderSortingPanel();
+
+renderOnSiteCounterBar();
 addSortMoviesHandler();
 
 let currentMoviesList = listOfMovies;

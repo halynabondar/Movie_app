@@ -38,7 +38,7 @@ function renderSortingLabel() {
 function renderSortingDropdown() {
     const select = document.createElement('select');
     select.id = 'sort-select';
-    select.appendChild(renderSortingOption('Select something...'));
+    select.appendChild(renderSortingOption('...'));
     select.appendChild(renderSortingOption('Title', 'title'));
     select.appendChild(renderSortingOption('Year', 'movie_year'));
     select.appendChild(renderSortingOption('Price', 'price'));
