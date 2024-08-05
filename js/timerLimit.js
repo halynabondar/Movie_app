@@ -1,3 +1,4 @@
+let timeoutId; // Declare a variable to store the timeout ID
 function timerLimitRender() {
     const nav = document.getElementById("nav");
     const timerLimit = document.createElement('div');
@@ -42,14 +43,20 @@ function renderLimitOption(title, value) {
 
 function timerTimeoutHandler(){
     const minutes = parseInt(document.querySelector('#limit-select').value);
-    const message = `You ware already picking movie for ${minutes} minutes! Would you like to review timer?`;
+    const message = `You were already picking movie for ${minutes} minutes! Would you like to review timer?`;
     if (confirm(message)){
         timerDropdownHandler();
     }
 }
 
 function timerDropdownHandler(){
+    if (timeoutId) {
+        clearTimeout(timeoutId); // Clear the previous timeout
+    }
+
     const minutes = parseInt(document.querySelector('#limit-select').value);
-    const milliseconds = minutes * 60 *1000;
-    setTimeout(timerTimeoutHandler, milliseconds);
+    if (!isNaN(minutes)) {
+        const milliseconds = minutes * 60 * 1000;
+        timeoutId = setTimeout(timerTimeoutHandler, milliseconds);
+    }
 }

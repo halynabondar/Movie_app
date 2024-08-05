@@ -1,3 +1,4 @@
+const userJoined = new Date();
 function renderOnSiteCounterBar(){
     const nav = document.getElementById('nav');
 
@@ -8,6 +9,8 @@ function renderOnSiteCounterBar(){
     onSiteBar.appendChild(renderOnSiteValue());
 
     nav.appendChild(onSiteBar);
+
+    setInterval(updateUserOnSite, 1000); // Set the interval to update the on-site time every second
 }
 
 function renderOnSiteLabel(){
@@ -26,10 +29,9 @@ function renderOnSiteValue(){
 
     return value;
 }
-
-let userOnSite = 0; // seconds
 function updateUserOnSite(){
-    userOnSite += 1; // update a seconds count on site
+    const now = new Date();
+    const userOnSite = Math.floor((now - userJoined) / 1000);
     const newTimeString = new Date(userOnSite * 1000).toISOString().substring(11, 19);
 
     const onSiteValueElement = document.querySelector('#user-on-site');
