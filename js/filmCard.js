@@ -294,5 +294,6 @@ function handleFormSubmit(event) {
 function renderMovieCards(movies) {
     const main = document.querySelector('#main');
     main.innerHTML = ''; //clear content
+    main.classList.add('container');
     movies.forEach(movie => main.appendChild(renderFilmCard(movie)));
 }

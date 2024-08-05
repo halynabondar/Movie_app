@@ -1,7 +1,13 @@
 renderSearchMoviesForm();
 addSearchMoviesHandler();
 
+timerLimitRender();
+
 renderSortingPanel();
+
+renderOnSiteCounterBar();
 addSortMoviesHandler();
 
-renderMovieCards(listOfMovies);
+let currentMoviesList = listOfMovies;
+
+renderMovieCards(currentMoviesList);

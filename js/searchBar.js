@@ -17,6 +17,7 @@ function renderSearchMoviesFormInput() {
     const input = document.createElement('input');
     input.classList.add('input', 'search-input');
     input.type = 'search';
+    input.required = true;
     input.placeholder = 'Start typing to search...';
 
     return input;
@@ -40,17 +41,19 @@ function searchMovie(keyword) {
 }
 
 function addSearchMoviesHandler() {
-    const searchButton = document.querySelector('.search-btn');
-    searchButton.addEventListener("click", (event) => {
+    const searchForm = document.querySelector('#search-bar form');
+    searchForm.addEventListener("submit", (event) => {
         event.preventDefault();
         const searchInput = document.querySelector('.search-input');
         const keyword = searchInput.value.trim();
-        const searchResults = searchMovie(keyword);
 
-        if (searchResults.length === 0) {
+        currentMoviesList = searchMovie(keyword);
+
+        if (currentMoviesList.length === 0) {
             displayNoResultsMessage();
         } else {
-            renderMovieCards(searchResults);
+            currentMoviesList = sortMovies();
+            renderMovieCards(currentMoviesList);
         }
     });
 }
