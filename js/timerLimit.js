@@ -43,7 +43,7 @@ function renderLimitOption(title, value) {
 
 function timerTimeoutHandler(){
     const minutes = parseInt(document.querySelector('#limit-select').value);
-    const message = `You were already picking movie for ${minutes} minutes! Would you like to review timer?`;
+    const message = `You were already picking movie for ${minutes} minutes! Would you like to renew timer?`;
     if (confirm(message)){
         timerDropdownHandler();
     }
@@ -55,8 +55,6 @@ function timerDropdownHandler(){
     }
 
     const minutes = parseInt(document.querySelector('#limit-select').value);
-    if (!isNaN(minutes)) {
-        const milliseconds = minutes * 60 * 1000;
-        timeoutId = setTimeout(timerTimeoutHandler, milliseconds);
-    }
+    const milliseconds = minutes * 60 * 1000;
+    timeoutId = setTimeout(timerTimeoutHandler, milliseconds);
 }

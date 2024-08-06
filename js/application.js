@@ -6,8 +6,5 @@ timerLimitRender();
 renderSortingPanel();
 
 renderOnSiteCounterBar();
-addSortMoviesHandler();
 
-let currentMoviesList = listOfMovies;
-
-renderMovieCards(currentMoviesList);
+fetchAllMovies(renderMovieCards);

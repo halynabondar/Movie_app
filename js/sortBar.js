@@ -1,21 +1,3 @@
-// Sort movie
-
-function addSortMoviesHandler() {
-    const sortedByTitle = listOfMovies.sort((a, b) => {
-        if (a.title < b.title) return -1;
-        if (a.title > b.title) return 1;
-        return 0;
-    })
-    const sortedByPrice = listOfMovies.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
-    const sortedByYear = listOfMovies.sort((a, b) => a.movie_year - b.movie_year);
-
-    console.log(sortedByTitle);
-    console.log(sortedByPrice);
-    console.log(sortedByYear);
-}
-
-// Sorting panel
-
 function renderSortingPanel() {
     const nav = document.getElementById('nav');
     const sortWrapper = document.createElement('div');
@@ -49,26 +31,29 @@ function renderSortingDropdown() {
 }
 
 function handleSortSelection(){
-    currentMoviesList = sortMovies();
-    renderMovieCards(currentMoviesList);
+    fetchAllMovies(moviesList => {
+        sortMovies(moviesList);
+        renderMovieCards(moviesList);
+    });
+
 }
 
-function sortMovies() {
+function sortMovies(moviesList) {
     const sortingRule = document.querySelector('#sort-select').value;
 
     switch (sortingRule) {
         case 'title':
-            return sortByTitle();
+            return sortByTitle(moviesList);
         case 'movie_year':
-            return sortByYear();
+            return sortByYear(moviesList);
         case 'price':
-            return sortByPrice();
+            return sortByPrice(moviesList);
         default:
-            return currentMoviesList;
+            return moviesList;
     }
 }
-function sortByTitle(){
-    return currentMoviesList.sort((a,b) => {
+function sortByTitle(moviesList){
+    return moviesList.sort((a,b) => {
         const titleA = a.title.toUpperCase(); // ignore upper and lowercase
         const titleB = b.title.toUpperCase(); // ignore upper and lowercase
         if (titleA < titleB) {
@@ -83,16 +68,16 @@ function sortByTitle(){
     });
 }
 
-function sortByPrice(){
-    return currentMoviesList.sort((a,b) => {
+function sortByPrice(moviesList){
+    return moviesList.sort((a,b) => {
         const priceA = a.price;
         const priceB = b.price;
         return priceA - priceB;
     });
 }
 
-function sortByYear(){
-    return currentMoviesList.sort((a,b) => {
+function sortByYear(moviesList){
+    return moviesList.sort((a,b) => {
         const yearA = a.movie_year;
         const yearB = b.movie_year;
         return yearA - yearB;
@@ -107,4 +92,3 @@ function renderSortingOption(title, value) {
 
     return option;
 }
-
