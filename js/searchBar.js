@@ -35,9 +35,19 @@ function renderSearchMoviesFormButton() {
 
 function searchMovie(keyword) {
     const lowerCaseKeyword = keyword.toLowerCase().trim();
-    return listOfMovies.filter(movie =>
-        movie.title.toLowerCase().includes(lowerCaseKeyword)
-    );
+    fetchAllMovies(moviesList => {
+        const searchResults = moviesList.filter(movie =>
+            movie.title.toLowerCase().includes(lowerCaseKeyword)
+        );
+
+        if (searchResults.length === 0) {
+            displayNoResultsMessage();
+        } else {
+            sortMovies(searchResults);
+            renderMovieCards(searchResults);
+        }
+    });
+
 }
 
 function addSearchMoviesHandler() {
@@ -47,14 +57,7 @@ function addSearchMoviesHandler() {
         const searchInput = document.querySelector('.search-input');
         const keyword = searchInput.value.trim();
 
-        currentMoviesList = searchMovie(keyword);
-
-        if (currentMoviesList.length === 0) {
-            displayNoResultsMessage();
-        } else {
-            currentMoviesList = sortMovies();
-            renderMovieCards(currentMoviesList);
-        }
+        searchMovie(keyword);
     });
 }
 
