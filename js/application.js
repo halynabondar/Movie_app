@@ -7,4 +7,5 @@ renderSortingPanel();
 
 renderOnSiteCounterBar();
 
-fetchAllMovies(renderMovieCards);
+fetchAllMovies()
+    .then(listOfMovies => renderMovieCards(listOfMovies));

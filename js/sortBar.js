@@ -31,10 +31,11 @@ function renderSortingDropdown() {
 }
 
 function handleSortSelection(){
-    fetchAllMovies(moviesList => {
-        sortMovies(moviesList);
-        renderMovieCards(moviesList);
-    });
+    fetchAllMovies()
+        .then(moviesList => {
+            sortMovies(moviesList);
+            renderMovieCards(moviesList);
+        });
 
 }
 
