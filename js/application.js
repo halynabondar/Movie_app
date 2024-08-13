@@ -1,10 +1,7 @@
 renderSearchMoviesForm();
 addSearchMoviesHandler();
-
 timerLimitRender();
-
 renderSortingPanel();
-
 renderOnSiteCounterBar();
 
 fetchAllMovies()
