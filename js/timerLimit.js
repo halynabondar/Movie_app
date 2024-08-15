@@ -1,6 +1,6 @@
 let timeoutId; // Declare a variable to store the timeout ID
 function timerLimitRender() {
-    const nav = document.getElementById("nav");
+    const nav = document.getElementById("time");
     const timerLimit = document.createElement('div');
     timerLimit.id = 'timer-limit';
     nav.appendChild(timerLimit);

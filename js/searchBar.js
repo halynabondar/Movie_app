@@ -1,7 +1,7 @@
 // Search form
 function renderSearchMoviesForm() {
     //render search form
-    const nav = document.getElementById('nav');
+    const nav = document.getElementById('search');
     const searchBar = document.createElement('div');
     searchBar.id = 'search-bar';
     const form = document.createElement('form');
@@ -33,12 +33,24 @@ function renderSearchMoviesFormButton() {
     return searchButton;
 }
 
-function searchMovie(keyword) {
-    const lowerCaseKeyword = keyword.toLowerCase().trim();
+function searchMovie(searchQuery) {
+    const lowerCaseValue = searchQuery.value.toLowerCase().trim();
     fetchAllMovies()
         .then(moviesList => {
-            const searchResults = moviesList.filter(movie =>
-                movie.title.toLowerCase().includes(lowerCaseKeyword)
+            const searchResults = moviesList.filter(movie => {
+
+                if (searchQuery.field === 'everywhere') {
+                    return movie.title.toLowerCase().includes(lowerCaseValue) ||
+                        movie.description.toLowerCase().includes(lowerCaseValue) ||
+                        movie.movie_year.toString().toLowerCase().includes(lowerCaseValue) ||
+                        movie.director.toLowerCase().includes(lowerCaseValue) ||
+                        movie.actors.toString().toLowerCase().includes(lowerCaseValue);
+                } else {
+                    return movie[searchQuery.field].toString().toLowerCase().includes(lowerCaseValue);
+                }
+
+            }
+
             );
 
             if (searchResults.length === 0) {
@@ -56,10 +68,24 @@ function addSearchMoviesHandler() {
     searchForm.addEventListener("submit", (event) => {
         event.preventDefault();
         const searchInput = document.querySelector('.search-input');
-        const keyword = searchInput.value.trim();
+        const searchQuery = parseSearchQuery(searchInput.value.trim());
 
-        searchMovie(keyword);
+        searchMovie(searchQuery);
     });
+}
+
+function parseSearchQuery(inputString){
+    let field = 'everywhere';
+    let value = inputString.toLowerCase();
+    if (value.indexOf('title:') === 0 ||
+        value.indexOf('description:') === 0 ||
+        value.indexOf('director:') === 0 ||
+        value.indexOf('actors:') === 0) {
+        const items = value.split(':', 2);
+        field = items[0];
+        value = items[1];
+    }
+    return {field: field, value: value}
 }
 
 function displayNoResultsMessage(){

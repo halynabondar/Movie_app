@@ -1,7 +1,7 @@
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 30px 50px;
 }
 body {
     font-family: Avenir, serif;
@@ -14,13 +14,21 @@ body {
 /* nav */
 /* sort panel */
 
-#nav {
+#search, #time {
     display: flex;
-    flex-direction: row-reverse;
     justify-content: space-between;
+    gap: 40px;
+}
+#nav {
+    background-color: antiquewhite;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    padding: 20px 0;
+    box-shadow: 1px 1px 7px rgba(128, 128, 128, 0.5);
 }
 
 .sort-panel {
@@ -28,9 +36,12 @@ body {
     align-items: center;
     gap: 10px;
 }
+#sort-select {
+    cursor: pointer;
+}
 select {
     padding: 5px;
-    border-radius: 7px;
+    border-radius: 10px;
     border: none;
     background-color: lightblue;
     transition: background-color ease 0.3s;
@@ -47,6 +58,9 @@ select:hover {
     align-items: center;
     gap: 10px;
 }
+#limit-select {
+    cursor: pointer;
+}
 
 /* timer */
 
@@ -55,8 +69,9 @@ select:hover {
     flex-direction: column;
     text-align: center;
     padding: 7px 10px;
+    border: 1px solid white;
     border-radius: 12px;
-    background-color: blanchedalmond;
+    background-color: antiquewhite;
 }
 #user-on-site-label {
     color: rgb(128, 128, 128);
@@ -72,12 +87,11 @@ select:hover {
 
 .input {
     cursor: pointer;
-    background-color: rgba(128, 128, 128, 0.1);
     padding: 5px 5px;
     border: 1px solid lightblue;
-    border-radius: 7px;
+    border-radius: 10px;
     height: 30px;
-    width: 250px;
+    width: 200px;
     transition: all ease 0.3s;
 }
 
@@ -89,7 +103,7 @@ select:hover {
     cursor: pointer;
     border: none;
     padding: 7px 15px;
-    border-radius: 7px;
+    border-radius: 10px;
     background-color: lightblue;
     transition: all ease 0.3s;
 }
@@ -98,12 +112,24 @@ select:hover {
     background-color: deepskyblue;
 }
 
+/* filter panel */
+
+.filter-panel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#filter-select {
+    cursor: pointer;
+}
+
 /* main */
 
 #main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 50px;
+    margin-top: 100px;
 }
 
 .film-rating {
@@ -123,7 +149,7 @@ select:hover {
     border-radius: 15px;
 }
 
-.card-section {
+.film-title-section, .film-main-section {
     margin-bottom: 15px;
 }
 
@@ -165,7 +191,6 @@ span {
     overflow-y: scroll;
     flex-direction: column;
     gap: 15px;
-    /*margin-bottom: 15px;*/
     font-size: 14px;
 }
 
@@ -185,21 +210,37 @@ span {
 .comment-data-wrapper {
     font-style: italic;
 }
+.film-comments-section {
+    border-radius: 10px;
+    width: 80px;
+    text-align: center;
+    padding: 5px 7px;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color ease 0.3s;
+    background-color: lightblue;
+}
+.film-comments-section:hover {
+    background-color: deepskyblue;
+}
 
 .film-new-comment-section {
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
+    transition: all ease 1s;
 }
 
 .comment-form {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    margin: 15px 0;
 }
 
 .section-title {
     font-weight: bold;
-    margin-bottom: 10px;
 }
 
 textarea {
@@ -216,8 +257,43 @@ textarea {
     padding: 7px 20px;
     margin-bottom: -20px;
     transition: all ease 0.3s;
+    font-weight: bold;
 }
 
 .submit:hover {
     background-color: deepskyblue;
 }
+
+/*@media (max-width: 1100px) {*/
+/*    #nav {*/
+/*        margin: 0;*/
+/*        !*padding: 0;*!*/
+/*        width: 200px;*/
+/*        !*position: fixed;*!*/
+/*        height: 100%;*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
+/*        !*overflow: auto;*!*/
+/*        padding: 20px;*/
+/*        justify-content: flex-start;*/
+/*        gap: 20px;*/
+/*        align-items: flex-start;*/
+/*    }*/
+/*    .form {*/
+/*        display: block;*/
+/*    }*/
+/*    .btn {*/
+/*        margin-top: 10px;*/
+/*    }*/
+/*    #time {*/
+/*        justify-content: flex-end;*/
+/*    }*/
+/*    #search, #time {*/
+/*        display: flex;*/
+/*        gap: 20px;*/
+/*        flex-direction: column;*/
+/*    }*/
+/*    #main {*/
+/*        margin: 0;*/
+/*    }*/
+/*}*/

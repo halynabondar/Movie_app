@@ -212,6 +212,7 @@ function renderCommentData(commentText) {
 function renderCommentForm() {
     const newCommentSection = document.createElement('div');
     newCommentSection.classList.add('card-section', 'film-new-comment-section');
+    newCommentSection.style.display = 'none';
     // render add new comment subtitle
     newCommentSection.appendChild(renderSectionTitle('Add new comment'))
     // render form
@@ -221,12 +222,14 @@ function renderCommentForm() {
 
     // Handle form submission
     commentForm.addEventListener('submit', handleFormSubmit);
+
     return newCommentSection;
 }
 
 function renderCommentFormElement() {
     const formElement = document.createElement('form');
     formElement.classList.add('comment-form');
+    // formElement.style.transition = 'all 1s ease-out';
 
     // Append username input
     formElement.appendChild(renderUsernameInput());
@@ -269,7 +272,20 @@ function renderSectionTitle(title) {
     const sectionTitleElement = document.createElement('div');
     sectionTitleElement.textContent = title;
     sectionTitleElement.classList.add('section-title');
+
+    sectionTitleElement.addEventListener('click', showComments);
     return sectionTitleElement;
+}
+
+function showComments(event) {
+    event.target.reset();
+    const commentsList = event.target.parentElement.parentElement.querySelector('.comments-wrapper');
+    const block = document.querySelector('.film-new-comment-section');
+    if (block.style.display === 'block') {
+        block.style.display = 'none';
+    } else {
+        block.style.display = 'block';
+    }
 }
 
 function handleFormSubmit(event) {
