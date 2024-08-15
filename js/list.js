@@ -9,3 +9,15 @@ async function fetchAllMovies() {
     }
     return data;
 }
+
+function renderMovies(moviesList){
+    const searchResults = filterMoviesBySearchCriteria(moviesList);
+
+    const filteredResults = filterMoviesByFilter(searchResults);
+    if (filteredResults.length === 0) {
+        displayNoResultsMessage();
+    } else {
+        sortMovies(filteredResults);
+        renderMovieCards(filteredResults);
+    }
+}
