@@ -212,7 +212,7 @@ function renderCommentData(commentText) {
 function renderCommentForm() {
     const newCommentSection = document.createElement('div');
     newCommentSection.classList.add('card-section', 'film-new-comment-section');
-    newCommentSection.style.display = 'none';
+    // newCommentSection.style.display = 'none';
     // render add new comment subtitle
     newCommentSection.appendChild(renderSectionTitle('Add new comment'))
     // render form
@@ -278,14 +278,9 @@ function renderSectionTitle(title) {
 }
 
 function showComments(event) {
-    event.target.reset();
-    const commentsList = event.target.parentElement.parentElement.querySelector('.comments-wrapper');
-    const block = document.querySelector('.film-new-comment-section');
-    if (block.style.display === 'block') {
-        block.style.display = 'none';
-    } else {
-        block.style.display = 'block';
-    }
+    // event.target.reset();
+    const card = event.target.parentElement.parentElement
+    card.classList.toggle('expanded-comments');
 }
 
 function handleFormSubmit(event) {

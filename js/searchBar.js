@@ -20,6 +20,8 @@ function renderSearchMoviesFormInput() {
     input.required = true;
     input.placeholder = 'Start typing to search...';
 
+    input.onsearch = searchMovie;
+
     return input;
 }
 

@@ -137,6 +137,7 @@ select:hover {
     gap: 3px;
     height: 20px;
     margin-bottom: 7px;
+    justify-content: flex-end;
 }
 
 .fa-regular, .fa-solid {
@@ -147,6 +148,30 @@ select:hover {
     box-shadow: 1px 1px 7px rgba(128, 128, 128, 0.5);
     padding: 20px;
     border-radius: 15px;
+    height: 410px;
+}
+
+.film-card.expanded-comments{
+    height: auto;
+}
+
+.film-card .comment-wrapper, .film-card .film-new-comment-section{
+    display: none;
+}
+
+.film-card.expanded-comments .comment-wrapper{
+    display: block;
+    border: 1px solid rgb(128, 128, 128);
+    border-radius: 10px;
+    gap: 15px;
+    padding: 10px;
+}
+
+.film-card.expanded-comments .film-new-comment-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    transition: all ease 1s;
 }
 
 .film-title-section, .film-main-section {
@@ -192,13 +217,8 @@ span {
     flex-direction: column;
     gap: 15px;
     font-size: 14px;
-}
-
-.comment-wrapper {
-    border: 1px solid rgb(128, 128, 128);
-    border-radius: 10px;
-    gap: 15px;
-    padding: 10px;
+    margin-top: 10px;
+    /*background-color: red;*/
 }
 
 .comment-meta-wrapper {
@@ -209,29 +229,14 @@ span {
 
 .comment-data-wrapper {
     font-style: italic;
+    font-weight: normal;
 }
 .film-comments-section {
     border-radius: 10px;
-    width: 80px;
-    text-align: center;
-    padding: 5px 7px;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 20px;
     cursor: pointer;
-    transition: background-color ease 0.3s;
-    background-color: lightblue;
 }
-.film-comments-section:hover {
-    background-color: deepskyblue;
-}
-
-.film-new-comment-section {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    transition: all ease 1s;
-}
-
 .comment-form {
     display: flex;
     flex-direction: column;
