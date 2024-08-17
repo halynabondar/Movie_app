@@ -1,7 +1,7 @@
 // Search form
 function renderSearchMoviesForm() {
     //render search form
-    const nav = document.getElementById('nav');
+    const nav = document.getElementById('search');
     const searchBar = document.createElement('div');
     searchBar.id = 'search-bar';
     const form = document.createElement('form');
@@ -20,6 +20,8 @@ function renderSearchMoviesFormInput() {
     input.required = true;
     input.placeholder = 'Start typing to search...';
 
+    input.onsearch = searchMovie;
+
     return input;
 }
 
@@ -33,33 +35,58 @@ function renderSearchMoviesFormButton() {
     return searchButton;
 }
 
-function searchMovie(keyword) {
-    const lowerCaseKeyword = keyword.toLowerCase().trim();
-    fetchAllMovies()
-        .then(moviesList => {
-            const searchResults = moviesList.filter(movie =>
-                movie.title.toLowerCase().includes(lowerCaseKeyword)
-            );
+function searchMovie() {
+    fetchAllMovies().then(moviesList => renderMovies(moviesList));
+}
+function getSearchQuery(){
+    const searchInput = document.querySelector('.search-input');
+    const searchInputValue = searchInput.value
+    if (searchInputValue === '') return undefined;
 
-            if (searchResults.length === 0) {
-                displayNoResultsMessage();
+    return  parseSearchQuery(searchInputValue.trim());
+}
+function filterMoviesBySearchCriteria(moviesList){
+    const searchQuery = getSearchQuery();
+    if (! searchQuery) return moviesList;
+
+    const lowerCaseValue = searchQuery.value.toLowerCase().trim();
+
+    return moviesList.filter(movie => {
+            if (searchQuery.field === 'everywhere') {
+                return movie.title.toLowerCase().includes(lowerCaseValue) ||
+                    movie.description.toLowerCase().includes(lowerCaseValue) ||
+                    movie.movie_year.toString().toLowerCase().includes(lowerCaseValue) ||
+                    movie.director.toLowerCase().includes(lowerCaseValue) ||
+                    movie.actors.toString().toLowerCase().includes(lowerCaseValue);
             } else {
-                sortMovies(searchResults);
-                renderMovieCards(searchResults);
+                return movie[searchQuery.field].toString().toLowerCase().includes(lowerCaseValue);
             }
-        });
 
+        }
+
+    );
 }
 
 function addSearchMoviesHandler() {
     const searchForm = document.querySelector('#search-bar form');
     searchForm.addEventListener("submit", (event) => {
         event.preventDefault();
-        const searchInput = document.querySelector('.search-input');
-        const keyword = searchInput.value.trim();
-
-        searchMovie(keyword);
+        searchMovie();
     });
+}
+
+function parseSearchQuery(inputString){
+    let field = 'everywhere';
+    let value = inputString.toLowerCase();
+    if (value.indexOf('title:') === 0 ||
+        value.indexOf('description:') === 0 ||
+        value.indexOf('director:') === 0 ||
+        value.indexOf('actors:') === 0) {
+        const items = value.split(':', 2);
+        field = items[0];
+        value = items[1];
+    }
+    return {field: field, value: value}
 }
 
 function displayNoResultsMessage(){

@@ -1,6 +1,6 @@
 const userJoined = new Date();
 function renderOnSiteCounterBar(){
-    const nav = document.getElementById('nav');
+    const nav = document.getElementById('time');
 
     const onSiteBar = document.createElement('div');
 

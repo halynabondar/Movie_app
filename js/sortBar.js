@@ -1,8 +1,7 @@
 function renderSortingPanel() {
-    const nav = document.getElementById('nav');
+    const nav = document.getElementById('sort');
     const sortWrapper = document.createElement('div');
     sortWrapper.classList.add('sort-panel');
-    nav.classList.add('container');
     nav.appendChild(sortWrapper);
     sortWrapper.appendChild(renderSortingLabel());
     sortWrapper.appendChild(renderSortingDropdown());
@@ -11,10 +10,10 @@ function renderSortingPanel() {
 }
 
 function renderSortingLabel() {
-    const label = document.createElement('label');
-    label.textContent = 'Sort by:';
+    const labelSort = document.createElement('label');
+    labelSort.textContent = 'Sort by:';
 
-    return label;
+    return labelSort;
 }
 
 function renderSortingDropdown() {
@@ -31,12 +30,7 @@ function renderSortingDropdown() {
 }
 
 function handleSortSelection(){
-    fetchAllMovies()
-        .then(moviesList => {
-            sortMovies(moviesList);
-            renderMovieCards(moviesList);
-        });
-
+    fetchAllMovies().then(moviesList => renderMovies(moviesList));
 }
 
 function sortMovies(moviesList) {

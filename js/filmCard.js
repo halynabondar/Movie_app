@@ -212,6 +212,7 @@ function renderCommentData(commentText) {
 function renderCommentForm() {
     const newCommentSection = document.createElement('div');
     newCommentSection.classList.add('card-section', 'film-new-comment-section');
+    // newCommentSection.style.display = 'none';
     // render add new comment subtitle
     newCommentSection.appendChild(renderSectionTitle('Add new comment'))
     // render form
@@ -221,6 +222,7 @@ function renderCommentForm() {
 
     // Handle form submission
     commentForm.addEventListener('submit', handleFormSubmit);
+
     return newCommentSection;
 }
 
@@ -269,7 +271,15 @@ function renderSectionTitle(title) {
     const sectionTitleElement = document.createElement('div');
     sectionTitleElement.textContent = title;
     sectionTitleElement.classList.add('section-title');
+
+    sectionTitleElement.addEventListener('click', showComments);
     return sectionTitleElement;
+}
+
+function showComments(event) {
+    // event.target.reset();
+    const card = event.target.parentElement.parentElement
+    card.classList.toggle('expanded-comments');
 }
 
 function handleFormSubmit(event) {
