@@ -229,7 +229,6 @@ function renderCommentForm() {
 function renderCommentFormElement() {
     const formElement = document.createElement('form');
     formElement.classList.add('comment-form');
-    // formElement.style.transition = 'all 1s ease-out';
 
     // Append username input
     formElement.appendChild(renderUsernameInput());
