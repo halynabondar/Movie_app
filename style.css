@@ -9,6 +9,7 @@ body {
     line-height: 20px;
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 /* nav */
@@ -267,4 +268,31 @@ textarea {
 
 .submit:hover {
     background-color: deepskyblue;
+}
+
+/* --- */
+@media (max-width: 1200px) {
+    #nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        row-gap: 20px;
+        position: absolute;
+    }
+    #main {
+        margin-top: 200px;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+@media (max-width: 800px) {
+    #main {
+        grid-template-columns: 1fr;
+        margin-top: 240px;
+    }
+    #search {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }
