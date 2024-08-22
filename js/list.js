@@ -3,7 +3,6 @@ async function fetchAllMovies() {
     try {
         const response = await fetch("https://raw.githubusercontent.com/halynabondar/halynabondar.github.io/main/Data/movieApp.json");
         data = await response.json();
-        console.log(data)
     } catch (error) {
         console.error('There has been a problem with your fetch operation:', error);
     }
