@@ -14,12 +14,18 @@
 <ul>
 <li><b>Comments:</b> Users can submit comments for each movie. These comments will be displayed dynamically below the movie card.</li>
 <li><b>Star Ratings:</b> Allow users to rate movies using a star-rating system. The submitted rating will be displayed.</li>
-<li></li>
 </ul>
 
-<h4></h4>
+<h4>3. Movie Management</h4>
 <ul>
-<li></li>
-<li></li>
-<li></li>
+<li><b>Search:</b> Users can search for movies by entering keywords in a search bar.</li>
+<li><b>Sorting:</b>  Movies can be sorted based on different properties, such as release year, title, or price.</li>
+<li><b>Filtering:</b> Implement filters to display movies based on specific criteria, like movies released before or after a certain year.</li>
+</ul>
+
+<h4>4. Timers</h4>
+<ul>
+<li><b></b></li>
+<li><b></b></li>
+<li><b></b></li>
 </ul>
