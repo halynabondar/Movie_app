@@ -25,7 +25,12 @@
 
 <h4>4. Timers</h4>
 <ul>
-<li><b></b></li>
-<li><b></b></li>
-<li><b></b></li>
+<li>A countdown timer for selecting a movie, alerting the user when time is up.</li>
+<li>A session timer to show how long the user has been on the page.</li>
+</ul>
+
+<h4>4. Timers</h4>
+<ul>
+<li>A countdown timer for selecting a movie, alerting the user when time is up.</li>
+<li>A session timer to show how long the user has been on the page.</li>
 </ul>
