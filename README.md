@@ -34,3 +34,19 @@
 <li>Replace the static movie array with a custom API built to fetch movie data.</li>
 <li>Refactor the app to ensure smooth functionality with data fetched from the API using both promise chaining and async/await.</li>
 </ul>
+
+<h4>6. Refinement and Advanced Features</h4>
+<ul>
+<li>Use advanced JavaScript concept like asynchronous programming to enhance functionality.</li>
+<li>Apply further improvements to the UI and functionality, making the app ready for presentation.</li>
+</ul>
+
+<h3>Project Goals</h3>
+
+<ul>
+<li><b>User Experience:</b> Create a visually appealing interface that engages users.</li>
+<li><b>Functionality:</b> Ensure smooth interaction through search, sort, and filter features.</li>
+<li><b>Technical Mastery:</b> Showcase skills in JavaScript, DOM manipulation, API handling, and asynchronous programming.</li>
+</ul>
+
+<p>This project is a great opportunity to demonstrate creativity and technical proficiency, resulting in a functional and visually engaging movie platform prototype.</p>
