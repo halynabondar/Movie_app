@@ -9,3 +9,17 @@
 <li>Dynamically render a grid of movies on the page.</li>
 <li>Each movie card includes key information such as: title, description, release year, director, main actors, poster image, price.</li>
 </ul>
+
+<h4>2. Interactivity and User Engagement</h4>
+<ul>
+<li><b>Comments:</b> Users can submit comments for each movie. These comments will be displayed dynamically below the movie card.</li>
+<li><b>Star Ratings:</b> Allow users to rate movies using a star-rating system. The submitted rating will be displayed.</li>
+<li></li>
+</ul>
+
+<h4></h4>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+</ul>
