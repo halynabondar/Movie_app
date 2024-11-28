@@ -5,7 +5,7 @@
 <h3>Core Features and Functionalities</h3>
 
 <ul>
-<h5>Movie List Display</h5>
+<h4>Movie List Display</h4>
 <li>Dynamically render a grid of movies on the page.</li>
 <li>Each movie card includes key information such as:</li>
 
