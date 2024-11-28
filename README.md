@@ -4,8 +4,8 @@
 
 <h3>Core Features and Functionalities</h3>
 
-<h4>Movie List Display</h4>
+<h4>1. Movie List Display</h4>
 <ul>
 <li>Dynamically render a grid of movies on the page.</li>
-<li>Each movie card includes key information such as:</li>
+<li>Each movie card includes key information such as: title, description, release year, director, main actors, poster image, price.</li>
 </ul>
