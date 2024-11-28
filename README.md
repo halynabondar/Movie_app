@@ -29,8 +29,8 @@
 <li>A session timer to show how long the user has been on the page.</li>
 </ul>
 
-<h4>4. Timers</h4>
+<h4>5. Fetching Data from API</h4>
 <ul>
-<li>A countdown timer for selecting a movie, alerting the user when time is up.</li>
-<li>A session timer to show how long the user has been on the page.</li>
+<li>Replace the static movie array with a custom API built to fetch movie data.</li>
+<li>Refactor the app to ensure smooth functionality with data fetched from the API using both promise chaining and async/await.</li>
 </ul>
