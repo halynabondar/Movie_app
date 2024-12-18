@@ -51,6 +51,6 @@
 
 <p>This project is a great opportunity to demonstrate creativity and technical proficiency, resulting in a functional and visually engaging movie platform prototype.</p>
 
-### Screenshot
+## Screenshot
 
 <img src="screencapture.png" alt="Screenshot">
